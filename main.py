@@ -46,15 +46,9 @@ def main():
 
 def load_data(data_dir):
     """
-    Load image data from directory `data_dir`.
-
-    Assume `data_dir` has one directory named after each category, numbered
-    0 through NUM_CATEGORIES - 1. Inside each category directory will be some
-    number of image files.
-
-    Return tuple `(images, labels)`. `images` should be a list of all
-    of the images in the data directory, where each image is formatted as a
-    numpy ndarray with dimensions IMG_WIDTH x IMG_HEIGHT x 3. `labels` should
+    This function loads image data from directory `data_dir`.
+    It returns a tuple `(images, labels)`, where `images` should be a list of all
+    of the images in the data directory, and `labels` should
     be a list of integer labels, representing the categories for each of the
     corresponding `images`.
     """
@@ -77,11 +71,7 @@ def load_data(data_dir):
     return (images, labels)
 
 def get_model():
-    """
-    Returns a compiled convolutional neural network model. Assume that the
-    `input_shape` of the first layer is `(IMG_WIDTH, IMG_HEIGHT, 3)`.
-    The output layer should have `NUM_CATEGORIES` units, one for each category.
-    """
+    # The Neural Network Configuration
     model = tf.keras.models.Sequential([
         #Convulution and Max-pooling
         tf.keras.layers.Conv2D(
