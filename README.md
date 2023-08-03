@@ -7,11 +7,11 @@ The script loads image data from the specified data_directory. Replace data_dire
 
 The dataset is split into training and testing sets, and the labels are converted to categorical using tf.keras.utils.to_categorical.
 
-The CNN architecture is defined using TensorFlow's Sequential model. It consists of convolutional layers, max-pooling layers, flatten layer, dense layers, dropout layer, and an output layer with NUM_CATEGORIES units, one for each category.
+The CNN architecture is defined using TensorFlow's Sequential model. It consists of convolutional layers, max-pooling layers, flatten layer, dense layers, dropout layer, and an output layer with NUM_CATEGORIES units, one for each category. I was cognisant of the computing power of my device when I designed this model so in some cases, accuracy is traded off for speed.
 
 The model is compiled with the Adam optimizer and categorical cross-entropy loss function.
 
-The model is then trained on the training data for a total of EPOCHS epochs.
+The model is then trained on the training data for a total of 10 epochs.
 
 After training, the model is evaluated on the testing data to measure its performance.
 
